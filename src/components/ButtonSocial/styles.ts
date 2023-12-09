@@ -3,7 +3,7 @@ import styled from 'styled-components/native'
 import { RFValue } from 'react-native-responsive-fontsize'
 import theme from '../../../Style/theme'
 
-export const Button = styled.Button`
+export const Button = styled.View`
   width: ${RFValue(130)}px;
   height: ${RFValue(60)}px;
   align-items: center;

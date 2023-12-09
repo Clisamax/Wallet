@@ -10,6 +10,7 @@ import {
 	Description,
 	ViewButton
 } from './style';
+import ButtonSocial from '../../src/components/ButtonSocial/ButtonSocial';
 
 const screens: React.FC = () => {
 	return (
@@ -19,7 +20,7 @@ const screens: React.FC = () => {
 					<Title>Seja Bem Vindo(a) Wallet App</Title>
 					<Description>sign up with</Description>
 					<ViewButton>
-						
+						<ButtonSocial/>
 					</ViewButton>
 				</ContentHeader>
 				<ContentBody></ContentBody>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { View } from 'react-native'
 
-import { Button } from './style'
+import { Button } from './styles'
 
 const ButtonSocial: React.FC = () => {
   return (

@@ -1,18 +1,28 @@
 {
-  "presets": ["babel-preset-expo"],
+  "presets": [
+    [
+      "@babel/preset-modules",
+      {
+        "allowDeclareFields": true
+      }
+    ],
+    "@babel/preset-env",
+    "@babel/preset-react",
+    "@babel/preset-typescript"
+  ],
   "plugins": [
     [
       "module-resolver",
       {
         "root": ["./src"],
-        "extensions":[".js", ".jsx", ".ts", ".tsx"],
         "alias": {
           "@assets": "./src/assets",
           "@components": "./src/components",
-          "@routes": "./src/@routes",
-          "@screens": "./src/@screens",
-          "@styles": "./src/@styles",
-          "@services": "./src/services"
+          "@routes": "./src/routes",
+          "@screens": "./src/screens",
+          "@services": "./src/services",
+          "@style": "./src/style"
+          // Adicione outros aliases conforme necessário
         }
       }
     ]

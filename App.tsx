@@ -1,12 +1,8 @@
 import React, { useCallback } from 'react'
-
 import { View } from 'react-native'
-
-import theme from './Style/theme'
-
 import * as SplashScreen from 'expo-splash-screen'
-import * as Font from 'expo-font'
 
+import * as Font from 'expo-font'
 import { DMSans_400Regular } from '@expo-google-fonts/dm-sans'
 import { DMSerifDisplay_400Regular } from '@expo-google-fonts/dm-serif-display'
 import { Poppins_300Light, Poppins_400Regular, Poppins_500Medium, Poppins_700Bold, Poppins_800ExtraBold_Italic } from '@expo-google-fonts/poppins'
@@ -14,7 +10,9 @@ import { Roboto_300Light, Roboto_400Regular, Roboto_500Medium, Roboto_700Bold } 
 import { Inter_900Black } from '@expo-google-fonts/inter'
 import { ThemeProvider } from 'styled-components'
 import { StatusBar } from 'expo-status-bar'
-import Login from './src/screens/login'
+
+import Login from '@screens/login'
+import theme from '@styles/theme'
 
 void SplashScreen.preventAutoHideAsync()
 
@@ -39,7 +37,6 @@ const App: React.FC = () => {
       await SplashScreen.hideAsync()
     }
   }, [fontsLoaded])
-
   if (!fontsLoaded) {
     return null
   }

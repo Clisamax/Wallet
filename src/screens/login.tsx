@@ -10,7 +10,7 @@ import {
 	Description,
 	ViewButton
 } from './style';
-import ButtonSocial from '../../src/components/ButtonSocial/ButtonSocial';
+import ButtonSocial from '@components/ButtonSocial/ButtonSocial';
 
 const screens: React.FC = () => {
 	return (

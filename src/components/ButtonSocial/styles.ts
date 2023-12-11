@@ -1,7 +1,7 @@
 import styled from 'styled-components/native'
 //import { RectButton } from 'react-native-gesture-handler'
 import { RFValue } from 'react-native-responsive-fontsize'
-import theme from '../../../Style/theme'
+import theme from '../../styles/theme'
 
 export const Button = styled.View`
   width: ${RFValue(130)}px;

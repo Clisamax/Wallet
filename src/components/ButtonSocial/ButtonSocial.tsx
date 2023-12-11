@@ -1,12 +1,19 @@
 import React from 'react'
+import { RectButtonProps } from 'react-native-gesture-handler'
 import PngGoogle from '@assets/google.png'
 
-import { Button, IconGoogle } from './styles'
+import { Button, IconGoogle, Title } from './styles'
 
-const ButtonSocial: React.FC = () => {
+
+interface Props extends RectButtonProps {
+  title: string
+}
+
+const ButtonSocial: React.FC<Props> = ({ title, ...rest }) => {
   return (
     <Button>
-      <IconGoogle source={PngGoogle} resizeMode='contain' />
+      <IconGoogle source={PngGoogle} resizeMode="contain" />
+      <Title>{title}</Title>
     </Button>
   )
 }

@@ -20,7 +20,7 @@ const screens: React.FC = () => {
 					<Title>Seja Bem Vindo(a) Wallet App</Title>
 					<Description>sign up with</Description>
 					<ViewButton>
-						<ButtonSocial/>
+						<ButtonSocial title={'Google'} />
 					</ViewButton>
 				</ContentHeader>
 				<ContentBody></ContentBody>

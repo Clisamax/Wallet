@@ -1,12 +1,12 @@
 import React from 'react'
-import { View } from 'react-native'
+import PngGoogle from '@assets/google.png'
 
-import { Button } from './styles'
+import { Button, IconGoogle } from './styles'
 
 const ButtonSocial: React.FC = () => {
   return (
     <Button>
-      <View></View>
+      <IconGoogle source={PngGoogle} resizeMode='contain' />
     </Button>
   )
 }

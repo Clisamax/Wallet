@@ -11,5 +11,9 @@ export const Button = styled.View`
   border-radius: ${RFValue(5)}px;
   box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2);
 
-  background-color: ${theme.COLORS.GRAY4};
+  background-color: ${theme.COLORS.GRAY5};
+`
+export const IconGoogle = styled.Image`
+  width: ${RFValue(45)}px;
+  height: ${RFValue(45)}px;
 `

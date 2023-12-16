@@ -13,13 +13,14 @@ import { StatusBar } from 'expo-status-bar'
 
 import Login from '@screens/login'
 import theme from '@styles/theme'
+import { GestureHandlerRootView } from 'react-native-gesture-handler'
 
 void SplashScreen.preventAutoHideAsync()
 
 const App: React.FC = () => {
   const [fontsLoaded] = Font.useFonts({
     Roboto_300Light,
-    Roboto_400Regular,
+    Roboto_400Regular, 
     Roboto_500Medium,
     Roboto_700Bold,
     Inter_900Black,
@@ -41,13 +42,15 @@ const App: React.FC = () => {
     return null
   }
 
-  return (
-    <ThemeProvider theme={theme}>
-      <StatusBar style="dark" translucent backgroundColor="transparent" />
-      <View style={{ flex: 1 }} onLayout={onLayout}>
-        <Login />
-      </View>
-    </ThemeProvider>
-  )
+    return (
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <ThemeProvider theme={theme}>
+          <StatusBar style="dark" translucent backgroundColor="transparent" />
+          <View style={{ flex: 1 }} onLayout={onLayout}>
+            <Login />
+          </View>
+        </ThemeProvider>
+      </GestureHandlerRootView>
+    )
 }
 export default App

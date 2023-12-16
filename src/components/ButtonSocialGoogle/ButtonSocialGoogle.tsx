@@ -9,7 +9,7 @@ interface Props extends RectButtonProps {
   title: string
 }
 
-const ButtonSocial: React.FC<Props> = ({ title, ...rest }) => {
+const ButtonSocialGoogle: React.FC<Props> = ({ title, ...rest }) => {
   return (
     <Button>
       <IconGoogle source={PngGoogle} resizeMode="contain" />
@@ -18,4 +18,4 @@ const ButtonSocial: React.FC<Props> = ({ title, ...rest }) => {
   )
 }
 
-export default ButtonSocial
+export default ButtonSocialGoogle

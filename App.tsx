@@ -20,7 +20,7 @@ void SplashScreen.preventAutoHideAsync()
 const App: React.FC = () => {
   const [fontsLoaded] = Font.useFonts({
     Roboto_300Light,
-    Roboto_400Regular,
+    Roboto_400Regular, 
     Roboto_500Medium,
     Roboto_700Bold,
     Inter_900Black,

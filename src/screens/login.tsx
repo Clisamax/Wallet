@@ -3,8 +3,9 @@ import { SafeAreaView } from 'react-native'
 
 import { Container, ContentHeader, ContentBody, ContentFooter, Title, Description, ViewButton } from './style'
 
-import ButtonSocialGoogle from '@components/ButtonSocialGoogle/ButtonSocialGoogle'
-import ButtonSocialFacebook from '@components/ButtonSocial/ButtonSocialFacebook'
+import { ButtonSocialGoogle } from '@components/ButtonSocialGoogle'
+import { ButtonSocialFacebook } from '@components/ButtonSocial/ButtonSocialFacebook'
+import { Input } from '@components/Input'
 
 const screens: React.FC = () => {
   return (
@@ -18,7 +19,10 @@ const screens: React.FC = () => {
             <ButtonSocialFacebook title={'Facebook'} iconName={'facebook'} />
           </ViewButton>
         </ContentHeader>
-        <ContentBody></ContentBody>
+        <ContentBody>
+          <Input leftIcon />
+          <Input rightIcon/>
+        </ContentBody>
         <ContentFooter></ContentFooter>
       </Container>
     </SafeAreaView>

@@ -18,4 +18,4 @@ const ButtonSocialFacebook: React.FC<Props> = ({ title, iconName, ...rest }) => 
   )
 }
 
-export default ButtonSocialFacebook
+export { ButtonSocialFacebook }

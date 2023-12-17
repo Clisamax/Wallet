@@ -18,4 +18,4 @@ const ButtonSocialGoogle: React.FC<Props> = ({ title, ...rest }) => {
   )
 }
 
-export default ButtonSocialGoogle
+export { ButtonSocialGoogle }

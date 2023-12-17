@@ -3,7 +3,7 @@ import { RFValue } from 'react-native-responsive-fontsize'
 import theme from '@styles/theme'
 
 export const Container = styled.View`
-  padding: ${RFValue(10)}px;
+  padding: ${RFValue(20)}px;
 `
 
 export const ContentHeader = styled.View`

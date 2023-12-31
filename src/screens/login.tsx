@@ -20,8 +20,7 @@ const screens: React.FC = () => {
           </ViewButton>
         </ContentHeader>
         <ContentBody>
-          <Input leftIcon />
-          <Input rightIcon/>
+          
         </ContentBody>
         <ContentFooter></ContentFooter>
       </Container>

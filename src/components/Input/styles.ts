@@ -17,6 +17,7 @@ background-color: ${theme.COLORS.ATTENTION};
 
 export const InputContainer = styled.TextInput`
   flex: 1;
+  align-content: space-between;
   height: 45px;
   border: 0;
   border-radius: 8px;

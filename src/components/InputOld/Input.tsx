@@ -1,14 +1,37 @@
-import React from 'react';
-import { View } from 'react-native';
+import React, { forwardRef, useCallback, useState, useRef, useImperativeHandle, useEffect } from 'react'
+import { Text, TextInputProps } from 'react-native'
+import { useField } from '@unform/core'
+import { Ionicons } from '@expo/vector-icons'
 
-import { Container } from './styles';
-
-const InputOld: React.FC = () => {
-    return (
-        <Container>
-            
-      </Container>
-  );
+interface InputRef{
+    focus = void;
 }
 
-export default InputOld;
+interface InputValueReference{
+    value: string;
+}
+
+interface InputProps extends TextInputProps{
+    name: string;
+    value?: string;
+    iconName?: React.ComponentProps<typeof Ionicons>['name']
+    containerStyle?: {[key:string]: string | number}
+}
+
+import { Container } from './styles'
+
+const InputOld: React.ForwardRefRenderFunction<InputRef, InputProps> = (
+    {
+        name,
+        value,
+        iconName,
+        containerStyle,
+        ...rest
+    }
+) => {
+    return <Container>
+      <Text>Input</Text>
+  </Container>
+}
+
+export default InputOld

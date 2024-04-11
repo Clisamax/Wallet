@@ -1,0 +1,17 @@
+{
+  "extends": ["standard-with-typescript", "prettier"] ,
+  "parserOptions": { "project": "./tsconfig.json" },
+  "files": ["src/**/*.tsx", "src/**/*."],
+  "rules": {
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/consistent-type-definitions": "off",
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    ],
+    "react/react-in-jsx-scope": "on",
+    "comma-dangle": "off"
+  }
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { SafeAreaView } from 'react-native';
+import ButtonSocial from '@components/ButtonSocial/ButtonSocial';
 
 import {
   ContentHeader,
@@ -17,8 +18,8 @@ const Login: React.FC = () => {
       <Container>
         <ContentHeader>
           <Title>Seja bem vindo(a) {'\n'} a Wallet App</Title>
-          <Description></Description>
-          <ViewButton></ViewButton>
+          <Description>Sing Up with</Description>
+          <ViewButton><ButtonSocial/></ViewButton>
         </ContentHeader>
         <ContentBody></ContentBody>
         <ContentFooter></ContentFooter>

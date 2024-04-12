@@ -13,6 +13,7 @@
     "@expo-google-fonts/dm-serif-display": "^0.2.3",
     "@expo-google-fonts/poppins": "^0.2.3",
     "@expo-google-fonts/roboto": "^0.2.3",
+    "@expo/vector-icons": "^13.0.0",
     "expo": "~50.0.7",
     "expo-font": "^11.10.3",
     "expo-splash-screen": "^0.26.4",

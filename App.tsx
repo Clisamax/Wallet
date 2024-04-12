@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { View, Text } from 'react-native';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { View } from 'react-native';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
 
@@ -66,9 +67,12 @@ const Wallet: React.FC = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <StatusBar style="dark" translucent backgroundColor="transparent" />
-      <View onLayout={onLayout}><Login />
-      </View>
+      <GestureHandlerRootView>
+        <StatusBar style="dark" translucent backgroundColor="transparent" />
+        <View onLayout={onLayout}>
+          <Login />
+        </View>
+      </GestureHandlerRootView>
     </ThemeProvider>
   );
 };

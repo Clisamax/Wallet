@@ -1,6 +1,8 @@
 import React from 'react';
 import { SafeAreaView } from 'react-native';
-import ButtonSocial from '@components/ButtonSocial/ButtonSocial';
+import ButtonSocialGoogle from '@components/ButtonSocialGoogle/ButtonSocial';
+import ButtonSocialFacebook from "@components/ButtonSocialFacebook/ButtonSocial";
+import PngGoogle from '@assets/google.png';
 
 import {
   ContentHeader,
@@ -19,7 +21,10 @@ const Login: React.FC = () => {
         <ContentHeader>
           <Title>Seja bem vindo(a) {'\n'} a Wallet App</Title>
           <Description>Sing Up with</Description>
-          <ViewButton><ButtonSocial/></ViewButton>
+          <ViewButton>
+            <ButtonSocialGoogle title="Google" imagem={PngGoogle}  />
+           <ButtonSocialFacebook  iconName='facebook' title="Facebook" />
+          </ViewButton>
         </ContentHeader>
         <ContentBody></ContentBody>
         <ContentFooter></ContentFooter>

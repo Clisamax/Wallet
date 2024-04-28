@@ -16,11 +16,11 @@ box-shadow: 1px 3px 3px rgba(0,0,0,0.2);
 background-color: ${theme.COLORS.GRAY5};
 `;
 export const IconGoogle = styled.Image`
-width: ${RFValue(35)}px;
-height: ${RFValue(35)}px;
+width: ${RFValue(55)}px;
+height: ${RFValue(55)}px;
 `
 export const Title = styled.Text`
 font-size: ${RFValue(15)}px;
-margin-left: ${RFValue(10)}px;;
+margin-left: ${RFValue(0)}px;;
 font-family: ${theme.FONTS.POPPINSLIGHT};
 `

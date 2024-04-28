@@ -1,7 +1,7 @@
 {
   "extends": ["standard-with-typescript", "prettier"] ,
   "parserOptions": { "project": "./tsconfig.json" },
-  "files": ["src/**/*.tsx", "src/**/*."],
+  "files": ["src/**/*.tsx", "src/**/*.ts"],
   "rules": {
     "@typescript-eslint/strict-boolean-expressions": "off",
     "@typescript-eslint/consistent-type-definitions": "off",

@@ -1,9 +1,13 @@
 import React from 'react';
 import { SafeAreaView } from 'react-native';
-import ButtonSocialGoogle from '@components/ButtonSocialGoogle/ButtonSocial';
-import ButtonSocialFacebook from "@components/ButtonSocialFacebook/ButtonSocial";
-import PngGoogle from '@assets/google.png';
 
+
+import ButtonSocialGoogle from '@components/ButtonSocialGoogle/ButtonSocial';
+import ButtonSocialFacebook from '@components/ButtonSocialFacebook/ButtonSocial';
+import PngGoogle from '@assets/google-icon.png';
+import Button from '@components/Button';
+
+import Input from '@components/input';
 import {
   ContentHeader,
   ContentBody,
@@ -22,11 +26,25 @@ const Login: React.FC = () => {
           <Title>Seja bem vindo(a) {'\n'} a Wallet App</Title>
           <Description>Sing Up with</Description>
           <ViewButton>
-            <ButtonSocialGoogle title="Google" imagem={PngGoogle}  />
-           <ButtonSocialFacebook  iconName='facebook' title="Facebook" />
+            <ButtonSocialGoogle title="Google" imagem={PngGoogle} />
+            <ButtonSocialFacebook iconName="facebook" title="Facebook" />
           </ViewButton>
         </ContentHeader>
-        <ContentBody></ContentBody>
+        <ContentBody>
+          <Input
+            LeftIcon
+            iconName="mail-open-outline"
+            iconSize={25}
+            placeholder="digite seu email"
+          />
+          <Input
+            LeftIcon
+            iconName="lock-closed-outline"
+            iconSize={25}
+            placeholder="digite sua senha"
+          />
+        <Button title='entrar' onPress={() => {}}/>
+        </ContentBody>
         <ContentFooter></ContentFooter>
       </Container>
     </SafeAreaView>

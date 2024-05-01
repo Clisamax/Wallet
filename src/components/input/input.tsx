@@ -21,7 +21,7 @@ const Input: React.FC<inputProps & TextInputProps> = ({
   ...rest
 }) => {
   return (
-    <Container {...rest} >
+    <Container {...rest}>
       {LeftIcon && (
         <Icon
           name={iconName}
@@ -30,7 +30,7 @@ const Input: React.FC<inputProps & TextInputProps> = ({
           style={{ padding: 5 }}
         />
       )}
-      <InputContainer {...rest} placeholderTextColor={theme.COLORS.GRAY3}/>
+      <InputContainer {...rest} placeholderTextColor={theme.COLORS.GRAY3} />
       {RightIcon && (
         <Icon
           name={iconName}
@@ -43,4 +43,3 @@ const Input: React.FC<inputProps & TextInputProps> = ({
   );
 };
 export default Input;
-

@@ -52,6 +52,7 @@ export default {
 
 		TYPOTIME: '#6E664E',
 		TYPOGHOST: '#999999',
+        
 		TYPOBrand: '#55AB67',
 		TYPOSOCIAL: '#5B75A6',
 		TYPOPRIMARY: '#000000',

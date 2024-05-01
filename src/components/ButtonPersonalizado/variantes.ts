@@ -1,6 +1,4 @@
-import { useTheme } from 'styled-components';
-
-const theme = useTheme();
+import theme from '../../styles/theme';
 
 interface ButtonStyle {
   button: {
@@ -10,17 +8,20 @@ interface ButtonStyle {
   };
   title: {
     color: string;
+    fontSize?: number;
   };
   icon: {
     color: string;
   };
 }
+
 export interface ButtonVariant {
-  enable: ButtonStyle;
-  disable: ButtonStyle;
+  enabled: ButtonStyle;
+  disabled: ButtonStyle;
 }
+
 const buttonPrimary: ButtonVariant = {
-  enable: {
+  enabled: {
     button: {
       backgroundColor: theme.COLORS.PRIMARY,
     },
@@ -31,59 +32,7 @@ const buttonPrimary: ButtonVariant = {
       color: theme.COLORS.WHITE,
     },
   },
-  disable: {
-    button: {
-      backgroundColor: theme.COLORS.GRAY_100,
-    },
-    title: {
-      color: theme.COLORS.WHITE,
-    },
-    icon: {
-      color: theme.COLORS.WHITE,
-    },
-  },
-};
-const buttonOutLine: ButtonVariant = {
-  enable: {
-    button: {
-      borderColor: theme.COLORS.PRIMARY,
-      backgroundColor: 'trasparent',
-      borderWidth: 2,
-    },
-    title: {
-      color: theme.COLORS.GRAY1,
-    },
-    icon: {
-      color: theme.COLORS.GRAY1,
-    },
-  },
-  disable: {
-    button: {
-      backgroundColor: 'trasparent',
-      borderWidth: 2,
-      borderColor: theme.COLORS.PRIMARY,
-    },
-    title: {
-      color: theme.COLORS.GRAY_100,
-    },
-    icon: {
-      color: theme.COLORS.GRAY_100,
-    },
-  },
-};
-const buttonBlack: ButtonVariant = {
-  enable: {
-    button: {
-      backgroundColor: theme.COLORS.BLACK,
-    },
-    title: {
-      color: theme.COLORS.ORANGE_300,
-    },
-    icon: {
-      color: theme.COLORS.ORANGE_300,
-    },
-  },
-  disable: {
+  disabled: {
     button: {
       backgroundColor: theme.COLORS.GRAY_100,
     },
@@ -96,8 +45,90 @@ const buttonBlack: ButtonVariant = {
   },
 };
 
+const buttonOutLine: ButtonVariant = {
+  enabled: {
+    button: {
+      borderWidth: 2,
+      borderColor: theme.COLORS.PRIMARY,
+      backgroundColor: 'transparent',
+    },
+    title: {
+      color: theme.COLORS.GRAY1,
+    },
+    icon: {
+      color: theme.COLORS.GRAY1,
+    },
+  },
+  disabled: {
+    button: {
+      borderWidth: 2,
+      borderColor: theme.COLORS.PRIMARY,
+      backgroundColor: 'transparent',
+    },
+    title: {
+      color: theme.COLORS.GREEN1,
+    },
+    icon: {
+      color: theme.COLORS.GREEN1,
+    },
+  },
+};
+
+const buttonBlack: ButtonVariant = {
+  enabled: {
+    button: {
+      backgroundColor: theme.COLORS.BLACK,
+    },
+    title: {
+      color: theme.COLORS.WHITE,
+    },
+    icon: {
+      color: theme.COLORS.WHITE,
+    },
+  },
+  disabled: {
+    button: {
+      backgroundColor: theme.COLORS.GRAY_100,
+    },
+    title: {
+      color: theme.COLORS.WHITE,
+    },
+    icon: {
+      color: theme.COLORS.WHITE,
+    },
+  },
+};
+
+const buttonTransparent: ButtonVariant = {
+  enabled: {
+    button: {
+      backgroundColor: 'transparent',
+    },
+    title: {
+      color: theme.COLORS.GRAY2,
+      fontSize: 17,
+    },
+    icon: {
+      color: theme.COLORS.GRAY2,
+    },
+  },
+  disabled: {
+    button: {
+      backgroundColor: 'transparent',
+    },
+    title: {
+      color: theme.COLORS.GRAY2,
+      fontSize: 17,
+    },
+    icon: {
+      color: theme.COLORS.GRAY2,
+    },
+  },
+};
+
 export const variants = {
   primary: buttonPrimary,
   outline: buttonOutLine,
   black: buttonBlack,
+  transparent: buttonTransparent,
 };

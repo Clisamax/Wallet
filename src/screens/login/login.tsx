@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SafeAreaView } from 'react-native';
-
 
 import ButtonSocialGoogle from '@components/ButtonSocialGoogle/ButtonSocial';
 import ButtonSocialFacebook from '@components/ButtonSocialFacebook/ButtonSocial';
 import PngGoogle from '@assets/google-icon.png';
-import Button from '@components/Button';
+import { ButtonPersonalizado } from '@components/ButtonPersonalizado';
 
 import Input from '@components/input';
 import {
@@ -19,6 +18,14 @@ import {
 } from './styles';
 
 const Login: React.FC = () => {
+  const [loading, setLoading] = useState(false);
+  function onPressButton() {
+    setLoading(true);
+    console.log('pressionado');
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }
   return (
     <SafeAreaView>
       <Container>
@@ -43,7 +50,12 @@ const Login: React.FC = () => {
             iconSize={25}
             placeholder="digite sua senha"
           />
-        <Button title='entrar' onPress={() => {}}/>
+          <ButtonPersonalizado
+            title="entrar"
+            onPress={() => {}}
+            variant="black"
+            style={{ marginBottom: 20 }}
+          />
         </ContentBody>
         <ContentFooter></ContentFooter>
       </Container>

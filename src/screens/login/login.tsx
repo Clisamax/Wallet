@@ -16,6 +16,7 @@ import {
   Description,
   ViewButton,
 } from './styles';
+import Button from '@components/Button/Button';
 
 const Login: React.FC = () => {
   const [loading, setLoading] = useState(false);
@@ -40,20 +41,29 @@ const Login: React.FC = () => {
         <ContentBody>
           <Input
             LeftIcon
+            autoCorrect={false}
+            autoCapitalize="none"
+            secureTextEntry={false}
+            keyboardType="email-address"
             iconName="mail-open-outline"
             iconSize={25}
             placeholder="digite seu email"
           />
           <Input
             LeftIcon
+            RightIcon
+            keyboardType="default"
+            autoCorrect={false}
+            autoCapitalize="none"
+            secureTextEntry
             iconName="lock-closed-outline"
             iconSize={25}
             placeholder="digite sua senha"
           />
           <ButtonPersonalizado
             title="entrar"
-            onPress={() => {}}
-            variant="black"
+            onPress={onPressButton}
+            variant="primary"
             style={{ marginBottom: 20 }}
           />
         </ContentBody>

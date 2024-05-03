@@ -47,7 +47,7 @@ export function ButtonPersonalizado({
                         <AntDesign
                             size={25}
                             name={iconName}
-                            color={buttonStyle.icon.color}
+                            color={buttonStyle.button.backgroundColor}
                             style={{
                                 marginRight: 15,
                             }}

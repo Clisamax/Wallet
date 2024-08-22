@@ -1,10 +1,12 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { View } from 'react-native';
-import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
+import * as SplashScreen from 'expo-splash-screen';
+import { StatusBar } from 'expo-status-bar';
+import React, { useCallback, useEffect, useState } from 'react';
+import { View } from 'react-native';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
+import { DMSans_400Regular } from '@expo-google-fonts/dm-sans';
+import { DMSerifDisplay_400Regular } from '@expo-google-fonts/dm-serif-display';
 import {
   Poppins_300Light,
   Poppins_400Regular,
@@ -18,14 +20,12 @@ import {
   Roboto_500Medium,
   Roboto_700Bold,
 } from '@expo-google-fonts/roboto';
-import { DMSans_400Regular } from '@expo-google-fonts/dm-sans';
-import { DMSerifDisplay_400Regular } from '@expo-google-fonts/dm-serif-display';
 
-import { ThemeProvider } from 'styled-components';
+import Login from '@screens/login/login';
 import theme from '@styles/theme';
+import { ThemeProvider } from 'styled-components';
 
 SplashScreen.preventAutoHideAsync();
-import Login from '@screens/login/login';
 
 const Wallet: React.FC = () => {
   const [appIsReady, setAppIsReady] = useState(false);

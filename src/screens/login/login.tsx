@@ -1,31 +1,31 @@
-import React, { useState } from 'react';
-import { SafeAreaView } from 'react-native';
+import React, { useState } from 'react'
+import { SafeAreaView } from 'react-native'
 
-import ButtonSocialGoogle from '@components/ButtonSocialGoogle/ButtonSocial';
-import ButtonSocialFacebook from '@components/ButtonSocialFacebook/ButtonSocial';
-import PngGoogle from '@assets/google-icon.png';
-import { ButtonPersonalizado } from '@components/ButtonPersonalizado';
+import PngGoogle from '@assets/google-icon.png'
+import ButtonPersonalizado from '@components/ButtonPersonalizado/ButtonPersonalizado'
+import ButtonSocialFacebook from '@components/ButtonSocialFacebook/ButtonSocial'
+import ButtonSocialGoogle from '@components/ButtonSocialGoogle/ButtonSocial'
 
-import Input from '@components/input';
+import Input from '@components/input'
 import {
-  ContentHeader,
+  Container,
   ContentBody,
   ContentFooter,
-  Container,
-  Title,
+  ContentHeader,
   Description,
+  Title,
   ViewButton,
-} from './styles';
-import Button from '@components/Button/Button';
+} from './styles'
 
+// todo: arrumar função do onPress erro no loading
 const Login: React.FC = () => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false)
   function onPressButton() {
-    setLoading(true);
-    console.log('pressionado');
+    setLoading(true)
+    console.log('pressionado')
     setTimeout(() => {
-      setLoading(false);
-    }, 2000);
+      setLoading(false)
+    }, 2000)
   }
   return (
     <SafeAreaView>
@@ -60,17 +60,12 @@ const Login: React.FC = () => {
             iconSize={25}
             placeholder="digite sua senha"
           />
-          <ButtonPersonalizado
-            title="entrar"
-            onPress={onPressButton}
-            variant="primary"
-            style={{ marginBottom: 20 }}
-          />
+          <ButtonPersonalizado title="entrar" onPress={onPressButton} variant="primary"  />
         </ContentBody>
         <ContentFooter></ContentFooter>
       </Container>
     </SafeAreaView>
-  );
-};
+  )
+}
 
-export default Login;
+export default Login

@@ -1,6 +1,5 @@
-import theme from '@styles/theme';
-
-interface ButtonStyle {
+import theme from "@styles/theme";
+export interface ButtonStyle {
     button: {
         backgroundColor: string;
         borderWidth?: number;
@@ -37,15 +36,14 @@ const buttonPrimary: ButtonVariant = {
             backgroundColor: theme.COLORS.GRAY_100,
         },
         title: {
-            color: theme.COLORS.WHITE,
+            color: "#fff",
         },
         icon: {
-            color: theme.COLORS.WHITE,
+            color: "#fff",
         },
     },
-}
-
-const buttonOutLine: ButtonVariant = {
+};
+export const buttonOutline: ButtonVariant = {
     enabled: {
         button: {
             borderWidth: 2,
@@ -62,19 +60,19 @@ const buttonOutLine: ButtonVariant = {
     disabled: {
         button: {
             borderWidth: 2,
-            borderColor: theme.COLORS.PRIMARY,
+            borderColor: theme.COLORS.GRAY4,
             backgroundColor: 'transparent',
         },
         title: {
-            color: theme.COLORS.GREEN1,
+            color: theme.COLORS.GRAY3,
         },
         icon: {
-            color: theme.COLORS.GREEN1,
+            color: theme.COLORS.GRAY3,
         },
-    },
-}
 
-const buttonBlack: ButtonVariant = {
+    },
+};
+export const buttonBlack: ButtonVariant = {
     enabled: {
         button: {
             backgroundColor: theme.COLORS.BLACK,
@@ -98,8 +96,7 @@ const buttonBlack: ButtonVariant = {
         },
     },
 };
-
-const buttonTransparent: ButtonVariant = {
+export const buttonTransparent: ButtonVariant = {
     enabled: {
         button: {
             backgroundColor: 'transparent',
@@ -117,18 +114,18 @@ const buttonTransparent: ButtonVariant = {
             backgroundColor: 'transparent',
         },
         title: {
-            color: theme.COLORS.GRAY2,
+            color: theme.COLORS.GRAY4,
             fontSize: 17,
         },
         icon: {
-            color: theme.COLORS.GRAY2,
+            color: theme.COLORS.GRAY4,
         }
     }
 }
 
-export const variants = {
+export const buttonVariants = {
     primary: buttonPrimary,
-    outline: buttonOutLine,
+    outline: buttonOutline,
     black: buttonBlack,
-    transparent: buttonTransparent,
+    transparent: buttonTransparent
 };

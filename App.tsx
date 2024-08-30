@@ -1,39 +1,39 @@
-import * as Font from 'expo-font';
-import * as SplashScreen from 'expo-splash-screen';
-import { StatusBar } from 'expo-status-bar';
-import React, { useCallback, useEffect, useState } from 'react';
-import { View } from 'react-native';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import * as Font from 'expo-font'
+import * as SplashScreen from 'expo-splash-screen'
+import { StatusBar } from 'expo-status-bar'
+import React, { useCallback, useEffect, useState } from 'react'
+import { View } from 'react-native'
+import { GestureHandlerRootView } from 'react-native-gesture-handler'
 
-import { DMSans_400Regular } from '@expo-google-fonts/dm-sans';
-import { DMSerifDisplay_400Regular } from '@expo-google-fonts/dm-serif-display';
+import { DMSans_400Regular } from '@expo-google-fonts/dm-sans'
+import { DMSerifDisplay_400Regular } from '@expo-google-fonts/dm-serif-display'
 import {
   Poppins_300Light,
   Poppins_400Regular,
   Poppins_500Medium,
   Poppins_700Bold,
   Poppins_800ExtraBold,
-} from '@expo-google-fonts/poppins';
+} from '@expo-google-fonts/poppins'
 import {
   Roboto_300Light,
   Roboto_400Regular,
   Roboto_500Medium,
   Roboto_700Bold,
-} from '@expo-google-fonts/roboto';
+} from '@expo-google-fonts/roboto'
 
-import Login from '@screens/login/login';
-import theme from '@styles/theme';
-import { ThemeProvider } from 'styled-components';
+import Login from '@screens/login/login'
+import theme from '@styles/theme'
+import { ThemeProvider } from 'styled-components'
 
-SplashScreen.preventAutoHideAsync();
+SplashScreen.preventAutoHideAsync()
 
 const Wallet: React.FC = () => {
-  const [appIsReady, setAppIsReady] = useState(false);
+  const [appIsReady, setAppIsReady] = useState(false)
 
   useEffect(() => {
-    (async () => {
+    ;(async () => {
       try {
-        await SplashScreen.preventAutoHideAsync();
+        await SplashScreen.preventAutoHideAsync()
         await Font.loadAsync({
           Poppins_300Light,
           Poppins_400Regular,
@@ -46,23 +46,23 @@ const Wallet: React.FC = () => {
           Roboto_700Bold,
           DMSans_400Regular,
           DMSerifDisplay_400Regular,
-        });
+        })
       } catch {
         // handle error
       } finally {
-        setAppIsReady(true);
+        setAppIsReady(true)
       }
-    })();
-  }, []);
+    })()
+  }, [])
 
   const onLayout = useCallback(() => {
     if (appIsReady) {
-      SplashScreen.hideAsync();
+      SplashScreen.hideAsync()
     }
-  }, [appIsReady]);
+  }, [appIsReady])
 
   if (!appIsReady) {
-    return null;
+    return null
   }
 
   return (
@@ -74,7 +74,7 @@ const Wallet: React.FC = () => {
         </View>
       </GestureHandlerRootView>
     </ThemeProvider>
-  );
-};
+  )
+}
 
-export default Wallet;
+export default Wallet
